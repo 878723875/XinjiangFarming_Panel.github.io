@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>新疆现代化农业</title>
+    <!-- 引入刚刚下载的 ECharts 文件 -->
+    <script src="echarts.js"></script>
+</head>
+<body style="background-color:#0e4e80;">                  <!-- 设置页面背景颜色 -->
+  <style>
+    #main {
+      display: flex;
+      justify-content: space-between;
+      margin: 15px;
+      height: 550px
+    }
+    html,
+    body {
+      width: 100%;
+    }
+  </style>
+  <body>
+  <div id="main">
+    <div id="main" style="color: ghostwhite">
+  </div>
+  </body>
+  <div id="main">  
+  </div>
+  <script type="text/javascript">
+    var chartDom = document.getElementById('main');
+    var myChart = echarts.init(chartDom);
+    var option;
+
+    option = {
+      series: [
+        {
+          type: 'gauge',
+          axisLine: {
+            lineStyle: {
+              width: 30,
+              color: [
+                [0.3, '#67e0e3'],
+                [0.7, '#37a2da'],
+                [1, '#fd666d']
+              ]
+            }
+          },
+          pointer: {
+            itemStyle: {
+              color: 'auto'
+            }
+          },
+          axisTick: {
+            distance: -30,
+            length: 8,
+            lineStyle: {
+              color: '#fff',
+              width: 2
+            }
+          },
+          splitLine: {
+            distance: -30,
+            length: 30,
+            lineStyle: {
+              color: '#fff',
+              width: 3
+            }
+          },
+          axisLabel: {
+            color: 'auto',
+            distance: 40,
+            fontSize: 15
+          },
+          detail: {
+            valueAnimation: true,
+            formatter: '综合机械化耕作水平'+'\n'+'{value} %',
+            color: 'auto',
+            fontSize: 22
+          },
+          data: [
+            {
+              value: 84.89,
+            }
+          ]
+        }
+      ]
+    };
+
+    option && myChart.setOption(option);
+
+
+</script>
+</body>
+<!-- <p style="color: ghostwhite">2019年，新疆农业机械总动力2855.61万千瓦，比上年增长5.6%。农作物耕种收综合机械化水平84.89%，机耕率97.45%，机播率93.38%，机收率59.64%；</p> -->
+
+</html>
